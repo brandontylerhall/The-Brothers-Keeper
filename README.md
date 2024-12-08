@@ -39,5 +39,5 @@ These are simply the notable rooms. Various transitional corridors will connect 
         <ul> <em>No items (boss battle)</em></ul>
 </ol>
 
-## Map
-![map.png](map.png)
+[//]: # (## Map)
+[//]: # (![map.png]&#40;map.png&#41;)
