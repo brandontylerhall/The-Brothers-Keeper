@@ -214,3 +214,46 @@ rooms = {
         },
     }
 }
+
+
+def print_directions():
+    room = game_state['current_room']
+    room_directions = list(rooms.get(room).keys())
+    available_directions = []
+
+    print(f"You're currently in: {game_state['current_room']}")
+
+    for direction in directions:
+        if direction in room_directions:
+            available_directions.append(direction)
+
+    print('Your available directions are: {}'.format(', '.join(available_directions)))
+
+
+print_directions()
+while game_running:
+    user_in = input("What is your move: ")
+    words = user_in.lower().lower().split()
+
+    # If the user pressed enter without any text, then it tells them to stop being bad.
+    if not words:
+        print('You did not give me a command. Please try again.')
+        continue
+    elif len(words) == 2:
+        verb = words[0]
+        noun = words[1]
+    else:
+        verb = words[0]
+        noun = ''
+
+    # This if block will be replaced with a "handle_go" function in the full game, but it checks
+    # what room the player is currently in (game_state['current_room']) against the dictionary of all rooms,
+    # and if that room both exists and has a direction that matches what the user input, it changes the room.
+    if verb == 'go' and noun in rooms[game_state['current_room']]:
+        game_state['current_room'] = rooms[game_state['current_room']][noun]
+        print_directions()
+    # Instead of setting the room to 'exit,' I thought it made much more sense to simply check an input flag.
+    elif verb == 'exit':
+        break
+    else:
+        print("I can't do that. Try telling me to go somewhere.")
