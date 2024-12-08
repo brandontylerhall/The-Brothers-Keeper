@@ -4,6 +4,5 @@ settings.py
 *.pot
 *.pyc
 .idea/
-mod_6_assignment.py
 map.png
 INSTRUCTIONS.MD
