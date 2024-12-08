@@ -1,0 +1,9 @@
+*.venv
+settings.py
+*.log
+*.pot
+*.pyc
+.idea/
+mod_6_assignment.py
+map.png
+INSTRUCTIONS.MD
