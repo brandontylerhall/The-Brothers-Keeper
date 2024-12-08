@@ -38,6 +38,7 @@ rooms = {
     'chamber_to_guthan_torag': {
         'north': 'Torag\'s Tomb',
         'west': 'Guthan\'s Tomb',
+        'east': 'Crypt of the Fallen',
         'description': '',
         'object': {
             'around': '',
@@ -58,7 +59,6 @@ rooms = {
             'obj3': '',
         },
     },
-
     ####################################################
     'Torag\'s Tomb': {
         'south': 'chamber_to_guthan_torag',
@@ -155,7 +155,7 @@ rooms = {
             'obj3': '',
         },
     },
-    #######################################################
+    ####################################################
     'The Forgotten Shrine': {
         'north': 'Dharok\'s Tomb',
         'item': 'steel pickaxe',
@@ -167,7 +167,7 @@ rooms = {
             'obj3': '',
         },
     },
-    #################################################
+    ####################################################
     'Ahrim\'s Tomb': {
         'down': 'The Point of No Return',
         'item': 'Ahrim\'s Ward',
@@ -213,6 +213,7 @@ rooms = {
             'obj3': '',
         },
     }
+    ####################################################
 }
 
 
@@ -225,7 +226,7 @@ def print_directions():
 
     for direction in directions:
         if direction in room_directions:
-            available_directions.append(direction)
+            available_directions.append(direction.capitalize())
 
     print('Your available directions are: {}'.format(', '.join(available_directions)))
 
@@ -246,13 +247,15 @@ while game_running:
         verb = words[0]
         noun = ''
 
+    if verb == 'enter' and game_state['current_room'] == 'Mort\'ton':
+        game_state['current_room'] = 'Crypt of the Fallen'
+        print_directions()
     # This if block will be replaced with a "handle_go" function in the full game, but it checks
     # what room the player is currently in (game_state['current_room']) against the dictionary of all rooms,
     # and if that room both exists and has a direction that matches what the user input, it changes the room.
-    if verb == 'go' and noun in rooms[game_state['current_room']]:
+    elif verb == 'go' and noun in rooms[game_state['current_room']]:
         game_state['current_room'] = rooms[game_state['current_room']][noun]
         print_directions()
-    # Instead of setting the room to 'exit,' I thought it made much more sense to simply check an input flag.
     elif verb == 'exit':
         break
     else:
