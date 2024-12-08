@@ -6,3 +6,4 @@ settings.py
 .idea/
 map.png
 INSTRUCTIONS.MD
+test.py
