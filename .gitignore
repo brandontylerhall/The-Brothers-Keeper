@@ -1,9 +1,0 @@
-*.venv
-settings.py
-*.log
-*.pot
-*.pyc
-.idea/
-map.png
-INSTRUCTIONS.MD
-test.py
