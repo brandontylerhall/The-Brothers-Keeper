@@ -1,5 +1,7 @@
 game_state = {
     'has_pickaxe': False,
+    'destroyed_wall': False,
+    'has_amulet': False,
     'inventory': [],
     'current_room': 'Mort\'ton',
 }
@@ -311,12 +313,35 @@ rooms = {
         # Item
         'item': 'boots',
         # Lore
-        'description': '',
+        'description':
+            "You step through the archway into Karil's Tomb. The air is strangely still, with an almost unnatural "
+            "silence hanging in the air.  Before you lies a vast chamber dominated by Karil's SARCOPHAGUS.  The walls "
+            "are lined with TARGETS and BOLTS, remnants of Karil's days as a master archer. In the center of the "
+            "room, a sleek obsidian ALTAR holds Karil's BOOTS, which seem to shimmer with a faint, ethereal glow. The "
+            "only exit is back NORTH.",
         'object': {
-            'around': '',
-            'obj1': '',
-            'obj2': '',
-            'obj3': '',
+            'around':
+                "The room is dimly lit by a single shaft of light emanating from a CRYSTAL embedded in the ceiling. "
+                "KARIL'S SARCOPHAGUS is intricately carved with scenes of the hunt and marksmanship.",
+            'sarcophagus':
+                "Karil's sarcophagus is made of polished onyx, its surface depicting scenes of him stalking prey "
+                "through the forest and loosing bolts with deadly accuracy.  He is shown wielding his signature "
+                "crossbow, adorned with dragonhide and runes of swiftness.",
+            'altar':
+                "The altar is crafted from smooth obsidian, its surface cool to the touch. It seems to absorb the "
+                "light, creating an atmosphere of stealth and shadows.",
+            'boots':
+                "The boots rest atop the altar, crafted from supple dragonhide and imbued with a magical lightness. "
+                "They seem to whisper promises of speed and agility.",
+            'targets':
+                "The targets are riddled with holes, evidence of Karil's exceptional marksmanship.  Some bolts still "
+                "protrude from the targets, their shafts crafted from dark metal.",
+            'bolts':
+                "The bolts are stacked neatly in piles, their tips gleaming menacingly in the dim light.  You can "
+                "almost hear the whirring sound they made as they flew through the air.",
+            'crystal':
+                "The crystal pulsates with a soft, inner light, casting an eerie glow upon the tomb. It seems to hum "
+                "with a subtle energy, as if holding some ancient power."
         },
     },
     ####################################################
@@ -325,12 +350,27 @@ rooms = {
         'south': 'Forsaken Hollow',
         'east': 'Dharok\'s Tomb',
         # Lore
-        'description': '',
+        'description':
+            "You enter the Eastern Antechamber, a spacious hall with an air of faded grandeur.  The walls are lined "
+            "with empty weapon RACKS and crumbling display cases, hinting at a time when this room held treasures and "
+            "trophies.  ARCHWAYS lead EAST and WEST, while a dark passage descends SOUTH.  A large, cracked MOSAIC "
+            "dominates the far wall, depicting a battle scene.",
         'object': {
-            'around': '',
-            'obj1': '',
-            'obj2': '',
-            'obj3': '',
+            'around':
+                "The room is filled with an eerie silence, broken only by the occasional drip of water from the "
+                "ceiling.  Dust covers every surface, and cobwebs cling to the corners.  The MOSAIC is the only "
+                "source of color in the otherwise drab chamber.",
+            'mosaic':
+                "The mosaic depicts an epic battle with the six brothers fighting side-by-side.  Despite the damage, "
+                "you can still make out the details: Ahrim wielding his staff, Dharok with his axe, Guthan with his "
+                "spear, Karil with his crossbow, Torag with his hammers, and Verac with his flail.  They stand united "
+                "against a horde of shadowy figures.",
+            'racks':
+                "The weapon racks are empty, their metal frames rusted and twisted.  You can almost imagine the "
+                "gleaming swords and axes that once hung here.",
+            'cases':
+                "The display cases are shattered, their glass shards scattered across the floor.  It's impossible to "
+                "tell what treasures they once held, but the remnants of velvet linings hint at valuable artifacts."
         },
     },
     ####################################################
@@ -338,12 +378,22 @@ rooms = {
         # Direction(s)
         'north': 'Eastern Antechamber',
         # Lore
-        'description': '',
+        'description':
+            "You descend into the Forsaken Hollow, a damp and claustrophobic chamber. The air is thick with the smell "
+            "of mildew and decay, and the silence is oppressive.  The only exit is back NORTH.",
         'object': {
-            'around': '',
-            'obj1': '',
-            'obj2': '',
-            'obj3': '',
+            'around':
+                "The walls are lined with cracked and crumbling STONE, and PUDDLES of stagnant water gather in the "
+                "uneven floor.  A sense of dread hangs heavy in the air.",
+            'stone':
+                "The stone is cold and damp to the touch, covered in moss and lichen. It seems to absorb what little "
+                "light there is, making the hollow feel even more oppressive.",
+            'puddles':
+                "The puddles are murky and foul-smelling, filled with decaying debris.  You can see the reflection of "
+                "your own fear in their dark depths.",
+            'ceiling':
+                "The ceiling is low and uneven, with jagged rocks jutting down at odd angles. It feels as though the "
+                "hollow could collapse at any moment, burying you alive."
         },
     },
     ####################################################
@@ -354,12 +404,36 @@ rooms = {
         # Item
         'item': 'helm',
         # Lore
-        'description': '',
+        'description':
+            "You enter Dharok's Tomb, a cavernous chamber filled with the echoes of past battles. The air is thick "
+            "with the scent of blood and iron.  Before you stands his SARCOPHAGUS, its imposing presence "
+            "dominating the room.  The walls are lined with weapon RACKS and dented ARMOR, testaments to Dharok's "
+            "ferocity. In the center of the room, a massive stone ALTAR holds Dharok's HELM, radiating an aura of "
+            "power.  WEST lies the Eastern Antechamber, and SOUTH a passage leads deeper into the tomb.",
         'object': {
-            'around': '',
-            'obj1': '',
-            'obj2': '',
-            'obj3': '',
+            'around':
+                "The room is dimly lit by flickering TORCHES, casting long shadows that dance and writhe on the "
+                "walls.  Dharok's SARCOPHAGUS is intricately carved with scenes of brutal combat.",
+            'sarcophagus':
+                "Dharok's sarcophagus is made of black marble, its surface depicting scenes of him cleaving through "
+                "enemies with his mighty greataxe.  He is shown wielding his axe, its blade stained with the blood of "
+                "his foes, and his eyes burning with an insatiable rage.",
+            'altar':
+                "The altar is crafted from a single block of granite, its surface scarred with countless battle "
+                "wounds. It stands as a symbol of Dharok's unwavering strength and resilience.",
+            'helm':
+                "The helm rests atop the altar, its brutal design reflecting Dharok's bloodthirsty nature. A single "
+                "spike juts from the crown, and the faceplate is etched with a fearsome grimace.",
+            'racks':
+                "The weapon racks are filled with rusted and broken weapons, remnants of Dharok's countless "
+                "victories.  Swords, axes, and maces are all represented, each bearing the marks of brutal combat.",
+            'armor':
+                "The armor is dented and scarred, its once-gleaming surface now dull and lifeless.  It speaks of the "
+                "ferocity of the battles Dharok fought, and the hardiness that allowed him to emerge victorious.",
+            'torches':
+                "The torches flicker erratically, their flames casting an eerie glow on the surrounding walls.  They "
+                "seem to struggle against the oppressive atmosphere of the tomb, as if even the light fears Dharok's "
+                "presence."
         },
     },
     ####################################################
@@ -369,27 +443,73 @@ rooms = {
         # Item
         'item': 'pickaxe',
         # Lore
-        'description': '',
+        'description':
+            "You enter the Forgotten Shrine, a small chamber filled with an atmosphere of reverence and decay. The "
+            "walls are lined with ancient SCROLLS and crumbling TEXTS, their wisdom lost to time.  In the center of "
+            "the room, a weathered ALTAR holds a simple PICKAXE, its handle worn smooth with use.  The only exit is "
+            "NORTH, back to Dharok's Tomb.",
         'object': {
-            'around': '',
-            'obj1': '',
-            'obj2': '',
-            'obj3': '',
+            'around':
+                "Dust covers every surface, and cobwebs cling to the corners.  An eerie silence hangs in the air, "
+                "broken only by the occasional creak of the aging structure.  A sense of peace and sacrifice pervades "
+                "the air.",
+            'altar':
+                "The altar is made of cracked and weathered stone, its surface etched with faded inscriptions that "
+                "seem to speak of offerings and sacrifice.  It appears to have once been a place of worship, "
+                "but now it's just a forgotten relic.",
+            'pickaxe':
+                "The pickaxe is old and sturdy, its head made of iron and its handle crafted from oak.  It shows "
+                "signs of heavy use, but it's still in good condition.  It seems to have been placed carefully on the "
+                "altar, as if it were an offering.",
+            'scrolls':
+                "The scrolls are brittle and faded, their writing indecipherable.  They seem to contain ancient "
+                "knowledge and rituals, perhaps related to the offerings made at the shrine.",
+            'texts':
+                "The texts are crumbling and incomplete, their pages scattered across the floor.  You can make out "
+                "fragments of prayers and incantations, possibly invoking the power of the shrine."
         },
     },
     ####################################################
     'Ahrim\'s Tomb': {
         # Direction(s)
         'down': 'The Point of No Return',
+        'south': 'Crypt of the Fallen',
         # Item
         'item': 'ward',
         # Lore
-        'description': '',
+        'description':
+            "You enter Ahrim's Tomb, a chilling chamber filled with an oppressive silence. The air crackles with "
+            "unseen energy, and the faint scent of ozone hangs heavy in the air.  Before you stands AHRIM'S "
+            "SARCOPHAGUS, its lid cast aside, revealing a gaping darkness within.  The walls are lined with dusty "
+            "TOMES and ancient SCROLLS, remnants of Ahrim's vast magical knowledge.  In the center of the room, "
+            "a dark obsidian ALTAR holds AHRIM'S WARD, pulsating with a soft, ethereal glow.  A chilling DRAFT rises "
+            "from the depths of the open sarcophagus, beckoning you DOWN.",
         'object': {
-            'around': '',
-            'obj1': '',
-            'obj2': '',
-            'obj3': '',
+            'around':
+                "The room is shrouded in an unnatural darkness, the shadows seeming to writhe and twist as if alive.  "
+                "The DRAFT emanating from the sarcophagus whispers of untold depths and hidden dangers.",
+            'sarcophagus':
+                "Ahrim's sarcophagus lies open, its interior shrouded in impenetrable darkness.  A rickety LADDER "
+                "descends into the abyss, its rungs worn and treacherous.  The chilling DRAFT seems to emanate from "
+                "the depths, beckoning you towards the unknown.",
+            'altar':
+                "The altar is crafted from a single block of obsidian, its surface cold and smooth to the touch.  It "
+                "seems to hum with a subtle energy, as if channeling the power of the tomb itself.",
+            'ward':
+                "The ward rests atop the altar, crafted from polished silver and etched with runes of protection. It "
+                "pulsates with a soft, ethereal glow, radiating an aura of arcane power.",
+            'tomes':
+                "The tomes are bound in leather and filled with faded script and intricate diagrams.  They seem to "
+                "contain powerful spells and forbidden knowledge, but their secrets are guarded by Ahrim's lingering "
+                "magic.",
+            'scrolls':
+                "The scrolls are brittle and fragile, their edges crumbling with age.  They are covered in cryptic "
+                "symbols and arcane formulas, hinting at the depth of Ahrim's magical mastery.",
+            'draft':
+                "The chilling DRAFT rising from the sarcophagus seems to whisper promises of adventure and danger.  "
+                "It tugs at your curiosity, urging you to explore the depths below.",
+            'note': "The note is barely intact, but you can make out a desperate plea: "
+                    "\n'He stands vigilant, a final guardian.  Without the relic, your fate is sealed.'"
         },
     },
     ####################################################
@@ -398,12 +518,27 @@ rooms = {
         'north': 'The Blighted Sepulcher',
         'west': 'Hidden Chamber',
         # Lore
-        'description': '',
+        'description':
+            "You find yourself in a damp and narrow passage. The air is thick with the smell of mildew and "
+            "decay, and the silence is broken only by the echo of your own heartbeat.  A crumbling STONE "
+            "WALL blocks the path to the NORTH.",
         'object': {
-            'around': '',
-            'obj1': '',
-            'obj2': '',
-            'obj3': '',
+            'around':
+                "The passage is lined with ancient BRICKS, their surface worn smooth by the passage of countless "
+                "feet.  The air is heavy with a sense of foreboding.",
+            'wall':
+                {
+                    'wall_not_broken': "The wall is made of crumbling stone, held together by crumbling mortar. It "
+                                       "looks unstable and precarious, as if it could collapse at any moment.  "
+                                       "Through the gaps in the stone, you can make out a faint glow on the ground in "
+                                       "the distance. You might be able to break through it with the right tools.",
+                    'wall_broken': ''},
+            'bricks':
+                "The bricks lining the passage are cold and damp, etched with strange symbols and markings.  Some are "
+                "loose, and you can hear the scuttling of rats behind them.",
+            'ceiling':
+                "The ceiling is low and oppressive, with cracks running through it like veins.  Water drips from the "
+                "cracks, forming puddles on the floor."
         },
     },
     ####################################################
@@ -411,25 +546,84 @@ rooms = {
         # Direction(s)
         'east': 'The Point of No Return',
         # Item
-        'item': 'Amulet of the Damned',
+        'item': 'amulet',
         # Lore
-        'description': '',
+        'description':
+            "You emerge into a hidden chamber, the air thick with the scent of ancient magic.  A soft, ethereal glow "
+            "emanates from the AMULET of the Damned, resting atop a stone PEDESTAL in the center of the room.  The "
+            "walls are adorned with intricate RUNES that pulse with power.",
         'object': {
-            'around': '',
-            'obj1': '',
-            'obj2': '',
-            'obj3': '',
+            'around': {
+                'before_take_amulet': "The chamber is surprisingly spacious, with a high, vaulted ceiling.  An eerie "
+                                      "silence hangs in the air, broken only by the soft hum of magical energy.",
+                'after_take_amulet': "The chamber feels strangely empty now, the silence even more profound with the "
+                                     "amulet gone."
+            },
+            'amulet':
+                "The amulet rests atop the pedestal, its surface etched with intricate symbols that seem to shift and "
+                "writhe before your eyes.  It pulsates with a soft, ethereal glow, radiating an aura of immense power.",
+            'pedestal':
+                "The pedestal is made of smooth, polished stone, its surface cool to the touch.  It seems to hum with "
+                "a subtle energy, as if channeling the power of the amulet.",
+            'runes':
+                "The runes etched into the walls glow with an otherworldly light, their patterns shifting and "
+                "changing as you watch.  They seem to hum with a deep, resonant power, filling the chamber with an "
+                "aura of ancient magic."
         },
     },
     ####################################################
     'The Blighted Sepulcher': {
-        # Lore
-        'description': '',
+        'description':
+            "You stumble into the Blighted Sepulcher, a vast chamber pulsating with dark energy. The air is heavy "
+            "with the stench of decay and corrupted Zarosian magic.  AHRIM, his eyes glowing with an eerie purple "
+            "light, stands before you, a puppet of the ancient, malevolent forces that now control him.  He raises "
+            "his staff, and the shadows around him begin to writhe and take shape.",
         'object': {
-            'around': '',
-            'obj1': '',
-            'obj2': '',
-            'obj3': '',
+            'around': {
+                'no_helm':
+                    "AHRIM's gaze falls upon your unprotected head, and a sneer curls his lip. 'Foolish mortal,"
+                    "' he whispers, 'to face me without adequate protection.'  He raises his staff, and a bolt of "
+                    "dark energy strikes you down.",
+                'no_brassard':
+                    "AHRIM's eyes narrow as he notices your exposed arms. 'Such vulnerability...' he mutters, "
+                    "'an invitation to pain.'  He flicks his wrist, and shadowy tendrils wrap around your limbs, "
+                    "crushing them with unimaginable force.",
+                'no_ward':
+                    "AHRIM's staff glows with an eerie light as he senses your lack of magical defenses. 'Your spirit "
+                    "is weak,' he intones, 'a mere wisp in the face of my power.'  He unleashes a torrent of arcane "
+                    "energy, tearing your soul from your body.",
+                'no_gauntlets':
+                    "AHRIM's gaze falls upon your bare hands, and a cruel smile spreads across his face. 'Unarmed and "
+                    "unprepared,' he mocks, 'you are no match for me.'  He clenches his fist, and your weapons "
+                    "crumble into dust.",
+                'no_spear':
+                    "AHRIM's eyes gleam with amusement as he observes your lack of a proper weapon. 'A warrior "
+                    "without a spear?' he scoffs. 'You are but a child playing at war.'  He summons a whirlwind of "
+                    "shadows, tearing you apart limb from limb.",
+                'no_boots':
+                    "AHRIM's eyes flicker with disdain as he notices your exposed feet. 'So slow and clumsy,"
+                    "' he chides, 'you cannot hope to escape my wrath.'  He stamps his foot, and the ground beneath "
+                    "you erupts, swallowing you whole.",
+                'no_amulet':
+                    "AHRIM raises his staff, and the shadows surge towards you, their forms twisting into monstrous "
+                    "shapes with gaping maws and razor-sharp claws.  You raise your weapons in a desperate attempt to "
+                    "defend yourself, but the shadows overwhelm you, tearing at your flesh and consuming your soul.  "
+                    "Your vision fades to black as you hear Ahrim's chilling laughter echo through the chamber.",
+                'has_all':
+                    "AHRIM's eyes widen in surprise as he sees you approach, fully equipped and radiating an aura of "
+                    "power.  He raises his staff, and the shadows around him begin to writhe and take shape, "
+                    "ready to defend his brothers' legacy.  The battle begins!",
+                'battle':
+                    "The chamber erupts in a chaotic dance of light and shadow as you clash with AHRIM.  His staff "
+                    "crackles with corrupted energy, unleashing devastating spells.  But you stand your ground, "
+                    "your own weapons imbued with the power of the fallen brothers.  The Amulet of the Damned pulses "
+                    "with a warm light, dispelling the shadows that attempt to ensnare you.  The battle rages on, "
+                    "each strike bringing you closer to victory.",
+                'win':
+                    "With a final, desperate blow, you vanquish AHRIM.  His form dissolves into wisps of dark energy, "
+                    "and the shadows dissipate, revealing the ancient stones of the sepulcher.  You have overcome the "
+                    "Barrows' final guardian, claiming its treasures for your own."
+            }
         },
     }
     ####################################################
