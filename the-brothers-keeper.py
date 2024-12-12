@@ -1,4 +1,4 @@
-import os
+import utility
 
 from rooms import rooms
 
@@ -28,16 +28,12 @@ def print_directions():
     print('Your available directions are: {}'.format(', '.join(available_directions)))
 
 
-def clear():
-    os.system('cls' if os.name == 'nt' else 'clear')
-
-
 print_directions()
 
 while game_running:
     # this prevents the room descript from printing after every action
     if current_room != previous_room:
-        clear()
+        utility.clear()
         print(rooms[current_room]["description"])
         previous_room = current_room
 
@@ -61,10 +57,12 @@ while game_running:
         game_running = False
     elif verb.lower() == 'take':
         print('handle_take')
+    elif verb.lower() == 'clear':
+        utility.clear()
     elif verb.lower() == 'go':
         print('handle_go')
     elif verb.lower() == 'inventory':
-        print('handle_inventory')
+        utility.handle_inventory(game_state)
     elif verb.lower() == 'look':
         if noun == '':
             print('handle_look_around')
@@ -73,7 +71,7 @@ while game_running:
     elif verb.lower() == 'use':
         print('handle_use')
     elif verb.lower() == 'help':
-        print('handle_help')
+        utility.handle_help()
     elif verb.lower() == 'map':
         print('handle_map')
     else:
