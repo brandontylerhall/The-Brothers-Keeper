@@ -3,7 +3,7 @@ game_state = {
     'destroyed_wall': False,
     'has_amulet': False,
     'inventory': [],
-    'current_room': 'Mort\'ton',
+    'current_room': "Mort'ton",
 }
 
 game_running = True
@@ -12,7 +12,7 @@ previous_room = current_room
 directions = ['north', 'south', 'east', 'west', 'enter', 'down']
 
 rooms = {
-    'Mort\'ton': {
+    "Mort'ton": {
         # Direction(s)
         'enter': 'Crypt of the Fallen',
         # Lore
@@ -24,27 +24,27 @@ rooms = {
             'unsettling stillness. The only way forward is to ENTER the barrows.',
         'object': {
             'around':
-                'Your camp feels hastily put together, as if you intended to rest here only briefly. The FIREPIT has '
-                'long gone cold, and the TENT sags from overuse. From here, the BARROWS rise like a dark monument to '
+                'Your CAMP feels hastily put together, as if you intended to rest here only briefly. The FIREPIT has '
+                'long gone cold, and the TENT sags from overuse. From here, the barrows rise like a dark monument to '
                 'your goal, the entrance beckoning ominously.',
             'camp':
-                'Your camp is a simple setup meant for resting between arduous travels. '
-                'It\'s clear you didn\'t plan to stay long, given how sparse and disorganized it looks.',
+                "Your CAMP is a simple setup meant for resting between arduous travels. "
+                "It's clear you didn't plan to stay long, given how sparse and disorganized it looks.",
             'tent':
-                'The TENT is weathered and barely holding together, a cheap purchase from the Varrock General Store '
-                'that you now regret. It\'s a far cry from the sturdy tents you\'d hoped for, though you barely have '
-                'enough GP for anything better. Inside, there\'s little more than a thin bedroll and an empty pack.',
+                "The TENT is weathered and barely holding together, a cheap purchase from the Varrock General Store "
+                "that you now regret. It's a far cry from the sturdy tents you'd hoped for, though you barely have "
+                "enough GP for anything better. Inside, there's little more than a thin bedroll and an empty pack.",
             'firepit':
-                'The FIREPIT is surrounded by scattered stones, its ashes long cold. A half-eaten tuna lies next to '
-                'it—something you started nibbling on but couldn\'t finish. The nerves of your upcoming adventure made '
-                'it impossible to stomach much.'
+                "The FIREPIT is surrounded by scattered stones, its ashes long cold. A half-eaten tuna lies next to "
+                "it—something you started nibbling on but couldn't finish. The nerves of your upcoming adventure made "
+                "it impossible to stomach much."
         }
     },
     ####################################################
     'Crypt of the Fallen': {
         # Direction(s)
-        'north': 'Ahrim\'s Tomb',
-        'south': 'Verac\'s Tomb',
+        'north': "Ahrim's Tomb",
+        'south': "Verac's Tomb",
         'west': 'Western Antechamber',
         'east': 'Eastern Antechamber',
         # Lore
@@ -103,17 +103,17 @@ rooms = {
     ####################################################
     'Western Antechamber': {
         # Direction(s)
-        'north': 'Torag\'s Tomb',
-        'west': 'Guthan\'s Tomb',
+        'north': "Torag's Tomb",
+        'west': "Guthan's Tomb",
         'east': 'Crypt of the Fallen',
         # Lore
         'description':
-            'You enter a dimly lit antechamber. The air is heavy with the scent of dust and decay. '
-            'Cobwebs cling to the corners of the room, and the stone walls are cold and damp to the touch. '
-            'An ornate ARCHWAY leads NORTH to Torag\'s Tomb, and another to the WEST, leading to Guthan\'s Tomb. '
-            'To the EAST, the way leads back to the Crypt of the Fallen. A large, ornately carved '
-            'CHEST sits against the wall, its surface covered in intricate designs, but its lid hangs open. '
-            'A shattered remnant of a once-proud STATUE lies broken on the floor.',
+            "You enter a dimly lit antechamber. The air is heavy with the scent of dust and decay. "
+            "Cobwebs cling to the corners of the room, and the stone walls are cold and damp to the touch. "
+            "An ornate ARCHWAY leads NORTH to Torag's Tomb, and another to the WEST, leading to Guthan's Tomb. "
+            "To the EAST, the way leads back to the Crypt of the Fallen. A large, ornately carved "
+            "CHEST sits against the wall, its surface covered in intricate designs, but its lid hangs open. "
+            "A shattered remnant of a once-proud STATUE lies broken on the floor.",
         'object': {
             'around':
                 'The antechamber is sparsely furnished, with only the open CHEST and the broken STATUE remnant. '
@@ -126,13 +126,13 @@ rooms = {
                 'The grates are set high in the walls, offering glimpses of the outside world. '
                 'They are too small to climb through, but you can see the sky beyond.',
             'statue':
-                'The statue lies in pieces scattered across the floor. '
-                'It\'s impossible to tell who it once depicted, but the craftsmanship suggests it was once '
-                'a masterpiece. You notice a strange SYMBOL etched into the base of the largest fragment.'
+                "The statue lies in pieces scattered across the floor. "
+                "It's impossible to tell who it once depicted, but the craftsmanship suggests it was once "
+                "a masterpiece. You notice a strange SYMBOL etched into the base of the largest fragment."
         },
     },
     ####################################################
-    'Guthan\'s Tomb': {
+    "Guthan's Tomb": {
         # Direction(s)
         'east': 'Western Antechamber',
         # Item
@@ -144,15 +144,27 @@ rooms = {
             "HERBS and medical TOOLS, a testament to Guthan's life as a healer. In the center of the room, "
             "a massive ALTAR dominates the space, and atop it rests Guthan's SPEAR. The only exit is back EAST.",
         'object': {
-            'around':
-                "Sunlight filters through an OPENING in the ceiling, illuminating the room with a soft, warm glow. "
-                "GUTHAN'S SARCOPHAGUS is ornately carved with scenes of a valiant life.",
+            'around': {
+                'before_take_spear':
+                    "Sunlight filters through an OPENING in the ceiling, illuminating the room with a soft, "
+                    "warm glow.  GUTHAN'S SARCOPHAGUS is ornately carved with scenes of a valiant life.",
+                'after_take_spear':
+                    "Sunlight filters through an OPENING in the ceiling, illuminating the room with a soft, "
+                    "warm glow.  GUTHAN'S SARCOPHAGUS is ornately carved with scenes of a valiant life.  The altar "
+                    "now stands bare, the spear's ethereal glow replaced by an unsettling emptiness."
+            },
             'sarcophagus':
                 "Guthan's sarcophagus is carved from white marble, its surface depicting scenes of him healing the "
-                "sick and wielding his spear in battle. The spear is adorned with symbols of healing and protection.",
-            'altar':
-                "The altar is made of polished wood, its surface inlaid with silver symbols that seem to radiate a "
-                "gentle warmth. Unlike the other altars, this one feels more like a place of healing than of sacrifice.",
+                "sick and wielding his spear in battle.  The spear is adorned with symbols of healing and protection.",
+            'altar': {
+                'before_take_spear':
+                    "The altar is made of polished wood, its surface inlaid with silver symbols that seem to radiate "
+                    "a gentle warmth.  Unlike the other altars, this one feels more like a place of healing than "
+                    "sacrifice.",
+                'after_take_spear':
+                    "The altar is made of polished wood, its surface inlaid with silver symbols that now seem "
+                    "strangely cold.  The absence of the spear leaves a palpable void."
+            },
             "spear":
                 "The spear rests atop the altar, its haft crafted from polished wood and its head forged from "
                 "gleaming silver. Runes are etched along the blade, pulsing with a soft, white light.",
@@ -168,7 +180,7 @@ rooms = {
         },
     },
     ####################################################
-    'Torag\'s Tomb': {
+    "Torag's Tomb": {
         # Direction(s)
         'south': 'Western Antechamber',
         # Item
@@ -181,16 +193,27 @@ rooms = {
             "stands tall, and upon it rests Torag's GAUNTLETS, radiating an aura of immense strength. The only exit "
             "is back SOUTH.",
         'object': {
-            'around':
-                "The room is dimly lit by a few flickering TORCHES, casting long shadows on the walls. Torag's "
-                "SARCOPHAGUS is ornately carved with scenes of creation and battle.",
+            'around': {
+                'before_take_gauntlets':
+                    "The room is dimly lit by a few flickering torches, casting long shadows on the walls. TORAG'S "
+                    "SARCOPHAGUS is ornately carved with scenes of creation and battle.",
+                'after_take_gauntlets':
+                    "The room is dimly lit by a few flickering torches, casting long shadows on the walls.  TORAG'S "
+                    "SARCOPHAGUS is ornately carved with scenes of creation and battle.  The altar now stands bare, "
+                    "the absence of the gauntlets leaving a noticeable void."
+            },
             'sarcophagus':
-                "The sarcophagus is carved from granite, its surface depicting scenes of Torag forging weapons and "
-                "armor, and wielding his hammers in battle. He is shown dual-wielding his hammers, their intricate "
+                "Torag's sarcophagus is carved from granite, its surface depicting scenes of him forging weapons and "
+                "armor, and wielding his hammers in battle.  He is shown dual-wielding his hammers, their intricate "
                 "designs and flawless craftsmanship a testament to his skill.",
-            'altar':
-                "The altar is made of rough-hewn stone, its surface scarred with the marks of countless hammer blows. "
-                "It feels sturdy and unyielding, a fitting tribute to Torag's unwavering resolve.",
+            'altar': {
+                'before_take_gauntlets':
+                    "The altar is made of rough-hewn stone, its surface scarred with the marks of countless hammer "
+                    "blows. It feels sturdy and unyielding, a fitting tribute to Torag's unwavering resolve.",
+                'after_take_gauntlets':
+                    "The altar is made of rough-hewn stone, its surface scarred with the marks of countless hammer "
+                    "blows.  Without the gauntlets, it seems colder and less imposing."
+            },
             "gauntlets":
                 "The gauntlets rest atop the altar, crafted from thick plates of steel. They are etched with runes of "
                 "power, radiating an aura of immense strength.",
@@ -206,7 +229,7 @@ rooms = {
         },
     },
     ####################################################
-    'Verac\'s Tomb': {
+    "Verac's Tomb": {
         # Direction(s)
         'north': 'Crypt of the Fallen',
         'west': 'Southern Passage',
@@ -221,16 +244,28 @@ rooms = {
             "BRASSARD, emanating a soft, warm light.  NORTH lies the Crypt of the Fallen, and WEST is a "
             "passage leading further into the tomb.",
         'object': {
-            'around':
-                "The room is bathed in a soft, warm glow emanating from RUNES etched into the walls. "
-                "Verac's SARCOPHAGUS is intricately carved with scenes of peaceful worship and righteous fury.",
+            'around': {
+                'before_take_brassard':
+                    "The room is bathed in a soft, warm glow emanating from RUNES etched into the walls. VERAC'S "
+                    "SARCOPHAGUS is intricately carved with scenes of peaceful worship and righteous fury.",
+                'after_take_brassard':
+                    "The room is bathed in a soft, warm glow emanating from RUNES etched into the walls.  VERAC'S "
+                    "SARCOPHAGUS is intricately carved with scenes of peaceful worship and righteous fury.  The altar "
+                    "now stands bare, the brassard's warm light replaced by an unsettling stillness."
+            },
             'sarcophagus':
-                "Verac's sarcophagus is made of polished obsidian, its surface depicting scenes of him "
-                "leading prayers and wielding his flail in battle against injustice. The flail is adorned "
-                "with symbols of faith and purity, including the unmistakable mark of Saradomin.",
-            'altar':
-                "The altar is crafted from plain oak, its surface bare except for a single inscription: 'Faith "
-                "is my shield, truth is my weapon.' It emanates a sense of serenity and unwavering belief.",
+                "Verac's sarcophagus is made of polished obsidian, its surface depicting scenes of him leading "
+                "prayers and wielding his flail in battle against injustice. The flail is adorned with symbols of "
+                "faith and purity, including the unmistakable mark of Saradomin.",
+            'altar': {
+                'before_take_brassard':
+                    "The altar is crafted from plain oak, its surface bare except for a single inscription: 'Faith is "
+                    "my shield, truth is my weapon.' It emanates a sense of serenity and unwavering belief.",
+                'after_take_brassard':
+                    "The altar is crafted from plain oak, its surface bare except for a single inscription: 'Faith is "
+                    "my shield, truth is my weapon.'  Without the brassard, the inscription seems to mock your "
+                    "intrusion."
+            },
             "brassard":
                 "The brassard rests atop the altar, crafted from gleaming silver. It is etched with holy "
                 "symbols, radiating a soft, warm light that fills the tomb with a sense of peace.",
@@ -249,9 +284,9 @@ rooms = {
     ####################################################
     'Southern Passage': {
         # Direction(s)
-        'south': 'Karil\'s Tomb',
+        'south': "Karil's Tomb",
         'west': 'Shadowed Alcove',
-        'east': 'Verac\'s Tomb',
+        'east': "Verac's Tomb",
         # Lore
         'description':
             "Leaving Verac's Tomb, you enter a narrow passage. The air is heavy with the stench of decay, "
@@ -284,12 +319,22 @@ rooms = {
             "lingering in the air.  A SKELETON lies slumped against the wall, clutching a MAP in its bony fingers. "
             "The only exit is back EAST.",
         'object': {
-            'around':
-                "The alcove is shrouded in shadows.  An overturned TORCH lies on the floor, its flame long "
-                "extinguished. A thick layer of DUST coats every surface.",
-            'skeleton':
-                "The skeleton is clad in the tattered remnants of leather armor, its skeletal fingers still gripping "
-                "the piece of paper.",
+            'around': {
+                'before_take_map':
+                    "The alcove is shrouded in shadows.  An overturned TORCH lies on the floor, its flame long "
+                    "extinguished.  A thick layer of DUST coats every surface.",
+                'after_take_map':
+                    "The alcove is shrouded in shadows.  An overturned TORCH lies on the floor, its flame long "
+                    "extinguished.  A thick layer of DUST coats every surface.  The skeleton's hand lies empty, "
+                    "its grip finally loosened."
+            },
+            'skeleton': {
+                'before_take_map':
+                    "The skeleton is clad in the tattered remnants of leather armor, its skeletal fingers still "
+                    "gripping the piece of paper.",
+                'after_take_map':
+                    "The skeleton is clad in the tattered remnants of leather armor, its skeletal hand now empty."
+            },
             # TODO: after the player looks at the paper for the first time, this will change to 'map'
             'paper':
                 "The paper is worn and brittle, but you can make out faint lines and markings. Upon closer "
@@ -307,7 +352,7 @@ rooms = {
         },
     },
     ####################################################
-    'Karil\'s Tomb': {
+    "Karil's Tomb": {
         # Direction(s)
         'north': 'Southern Passage',
         # Item
@@ -320,16 +365,27 @@ rooms = {
             "room, a sleek obsidian ALTAR holds Karil's BOOTS, which seem to shimmer with a faint, ethereal glow. The "
             "only exit is back NORTH.",
         'object': {
-            'around':
-                "The room is dimly lit by a single shaft of light emanating from a CRYSTAL embedded in the ceiling. "
-                "KARIL'S SARCOPHAGUS is intricately carved with scenes of the hunt and marksmanship.",
+            'around': {
+                'before_take_boots':
+                    "The room is dimly lit by a single shaft of light emanating from a CRYSTAL embedded in the "
+                    "ceiling. KARIL'S SARCOPHAGUS is intricately carved with scenes of the hunt and marksmanship.",
+                'after_take_boots':
+                    "The room is dimly lit by a single shaft of light emanating from a CRYSTAL embedded in the "
+                    "ceiling. KARIL'S SARCOPHAGUS is intricately carved with scenes of the hunt and marksmanship.  "
+                    "The altar now stands bare, the boots' ethereal glow replaced by an unsettling stillness."
+            },
             'sarcophagus':
                 "Karil's sarcophagus is made of polished onyx, its surface depicting scenes of him stalking prey "
                 "through the forest and loosing bolts with deadly accuracy.  He is shown wielding his signature "
                 "crossbow, adorned with dragonhide and runes of swiftness.",
-            'altar':
-                "The altar is crafted from smooth obsidian, its surface cool to the touch. It seems to absorb the "
-                "light, creating an atmosphere of stealth and shadows.",
+            'altar': {
+                'before_take_boots':
+                    "The altar is crafted from smooth obsidian, its surface cool to the touch. It seems to absorb the "
+                    "light, creating an atmosphere of stealth and shadows.",
+                'after_take_boots':
+                    "The altar is crafted from smooth obsidian, its surface cool to the touch.  Without the boots, "
+                    "it seems to exude a sense of loss and vulnerability."
+            },
             'boots':
                 "The boots rest atop the altar, crafted from supple dragonhide and imbued with a magical lightness. "
                 "They seem to whisper promises of speed and agility.",
@@ -348,7 +404,7 @@ rooms = {
     'Eastern Antechamber': {
         # Direction(s)
         'south': 'Forsaken Hollow',
-        'east': 'Dharok\'s Tomb',
+        'east': "Dharok's Tomb",
         # Lore
         'description':
             "You enter the Eastern Antechamber, a spacious hall with an air of faded grandeur.  The walls are lined "
@@ -397,7 +453,7 @@ rooms = {
         },
     },
     ####################################################
-    'Dharok\'s Tomb': {
+    "Dharok's Tomb": {
         # Direction(s)
         'south': 'The Forgotten Shrine',
         'west': 'Eastern Antechamber',
@@ -411,16 +467,27 @@ rooms = {
             "ferocity. In the center of the room, a massive stone ALTAR holds Dharok's HELM, radiating an aura of "
             "power.  WEST lies the Eastern Antechamber, and SOUTH a passage leads deeper into the tomb.",
         'object': {
-            'around':
-                "The room is dimly lit by flickering TORCHES, casting long shadows that dance and writhe on the "
-                "walls.  Dharok's SARCOPHAGUS is intricately carved with scenes of brutal combat.",
+            'around': {
+                'before_take_helm':
+                    "The room is dimly lit by flickering TORCHES, casting long shadows that dance and writhe on the "
+                    "walls.  DHAROK'S SARCOPHAGUS is intricately carved with scenes of brutal combat.",
+                'after_take_helm':
+                    "The room is dimly lit by flickering TORCHES, casting long shadows that dance and writhe on the "
+                    "walls.  DHAROK'S SARCOPHAGUS is intricately carved with scenes of brutal combat.  The altar now "
+                    "stands bare, the helm's aura of power replaced by an eerie silence."
+            },
             'sarcophagus':
                 "Dharok's sarcophagus is made of black marble, its surface depicting scenes of him cleaving through "
-                "enemies with his mighty greataxe.  He is shown wielding his axe, its blade stained with the blood of "
-                "his foes, and his eyes burning with an insatiable rage.",
-            'altar':
-                "The altar is crafted from a single block of granite, its surface scarred with countless battle "
-                "wounds. It stands as a symbol of Dharok's unwavering strength and resilience.",
+                "enemies with his mighty axe.  He is shown wielding his axe, its blade stained with the blood of his "
+                "foes, and his eyes burning with an insatiable rage.",
+            'altar': {
+                'before_take_helm':
+                    "The altar is crafted from a single block of granite, its surface scarred with countless battle "
+                    "wounds. It stands as a symbol of Dharok's unwavering strength and resilience.",
+                'after_take_helm':
+                    "The altar is crafted from a single block of granite, its surface scarred with countless battle "
+                    "wounds.  Without the helm, it seems less imposing, as if a part of Dharok's spirit has departed."
+            },
             'helm':
                 "The helm rests atop the altar, its brutal design reflecting Dharok's bloodthirsty nature. A single "
                 "spike juts from the crown, and the faceplate is etched with a fearsome grimace.",
@@ -439,7 +506,7 @@ rooms = {
     ####################################################
     'The Forgotten Shrine': {
         # Direction(s)
-        'north': 'Dharok\'s Tomb',
+        'north': "Dharok's Tomb",
         # Item
         'item': 'pickaxe',
         # Lore
@@ -449,14 +516,26 @@ rooms = {
             "the room, a weathered ALTAR holds a simple PICKAXE, its handle worn smooth with use.  The only exit is "
             "NORTH, back to Dharok's Tomb.",
         'object': {
-            'around':
-                "Dust covers every surface, and cobwebs cling to the corners.  An eerie silence hangs in the air, "
-                "broken only by the occasional creak of the aging structure.  A sense of peace and sacrifice pervades "
-                "the air.",
-            'altar':
-                "The altar is made of cracked and weathered stone, its surface etched with faded inscriptions that "
-                "seem to speak of offerings and sacrifice.  It appears to have once been a place of worship, "
-                "but now it's just a forgotten relic.",
+            'around': {
+                'before_take_pickaxe':
+                    "Dust covers every surface, and cobwebs cling to the corners.  An eerie silence hangs in the air, "
+                    "broken only by the occasional creak of the aging structure.  A sense of peace and sacrifice "
+                    "pervades the air.",
+                'after_take_pickaxe':
+                    "Dust covers every surface, and cobwebs cling to the corners.  An eerie silence hangs in the air, "
+                    "broken only by the occasional creak of the aging structure.  The altar now stands bare, "
+                    "the absence of the pickaxe leaving a noticeable void."
+            },
+            'altar': {
+                'before_take_pickaxe':
+                    "The altar is made of cracked and weathered stone, its surface etched with faded inscriptions "
+                    "that seem to speak of offerings and sacrifice.  It appears to have once been a place of worship, "
+                    "but now it's just a forgotten relic.",
+                'after_take_pickaxe':
+                    "The altar is made of cracked and weathered stone, its surface etched with faded inscriptions "
+                    "that seem to speak of offerings and sacrifice.  With the pickaxe gone, the altar feels strangely "
+                    "incomplete, as if its purpose has yet to be fulfilled."
+            },
             'pickaxe':
                 "The pickaxe is old and sturdy, its head made of iron and its handle crafted from oak.  It shows "
                 "signs of heavy use, but it's still in good condition.  It seems to have been placed carefully on the "
@@ -470,7 +549,7 @@ rooms = {
         },
     },
     ####################################################
-    'Ahrim\'s Tomb': {
+    "Ahrim's Tomb": {
         # Direction(s)
         'down': 'The Point of No Return',
         'south': 'Crypt of the Fallen',
@@ -485,16 +564,27 @@ rooms = {
             "a dark obsidian ALTAR holds AHRIM'S WARD, pulsating with a soft, ethereal glow.  A chilling DRAFT rises "
             "from the depths of the open sarcophagus, beckoning you DOWN.",
         'object': {
-            'around':
-                "The room is shrouded in an unnatural darkness, the shadows seeming to writhe and twist as if alive.  "
-                "The DRAFT emanating from the sarcophagus whispers of untold depths and hidden dangers.",
+            'around': {
+                'before_take_ward':
+                    "The room is shrouded in an unnatural darkness, the shadows seeming to writhe and twist as if "
+                    "alive.  The DRAFT emanating from the sarcophagus whispers of untold depths and hidden dangers.",
+                'after_take_ward':
+                    "The room is shrouded in an unnatural darkness, the shadows seeming to writhe and twist as if "
+                    "alive.  The DRAFT emanating from the sarcophagus whispers of untold depths and hidden dangers.  "
+                    "The altar now stands bare, the ward's ethereal glow replaced by an ominous void."
+            },
             'sarcophagus':
                 "Ahrim's sarcophagus lies open, its interior shrouded in impenetrable darkness.  A rickety LADDER "
                 "descends into the abyss, its rungs worn and treacherous.  The chilling DRAFT seems to emanate from "
                 "the depths, beckoning you towards the unknown.",
-            'altar':
-                "The altar is crafted from a single block of obsidian, its surface cold and smooth to the touch.  It "
-                "seems to hum with a subtle energy, as if channeling the power of the tomb itself.",
+            'altar': {
+                'before_take_ward':
+                    "The altar is crafted from a single block of obsidian, its surface cold and smooth to the touch.  "
+                    "It seems to hum with a subtle energy, as if channeling the power of the tomb itself.",
+                'after_take_ward':
+                    "The altar is crafted from a single block of obsidian, its surface cold and smooth to the touch.  "
+                    "Without the ward, it seems to radiate a chilling aura, as if Ahrim's spirit lingers nearby."
+            },
             'ward':
                 "The ward rests atop the altar, crafted from polished silver and etched with runes of protection. It "
                 "pulsates with a soft, ethereal glow, radiating an aura of arcane power.",
@@ -523,16 +613,22 @@ rooms = {
             "decay, and the silence is broken only by the echo of your own heartbeat.  A crumbling STONE "
             "WALL blocks the path to the NORTH.",
         'object': {
-            'around':
-                "The passage is lined with ancient BRICKS, their surface worn smooth by the passage of countless "
-                "feet.  The air is heavy with a sense of foreboding.",
+            'around': {
+                'before_break_wall':
+                    "The passage is lined with ancient BRICKS, their surface worn smooth by the passage of countless "
+                    "feet.  The air is heavy with a sense of foreboding.",
+                'after_break_wall':
+                    "The passage is lined with ancient BRICKS, their surface worn smooth by the passage of countless "
+                    "feet.  A gaping hole in the wall leads NORTH, revealing a chamber bathed in an eerie glow."
+            },
             'wall':
                 {
                     'wall_not_broken': "The wall is made of crumbling stone, held together by crumbling mortar. It "
                                        "looks unstable and precarious, as if it could collapse at any moment.  "
                                        "Through the gaps in the stone, you can make out a faint glow on the ground in "
                                        "the distance. You might be able to break through it with the right tools.",
-                    'wall_broken': ''},
+                    'wall_broken': 'A gaping hole now mars the wall, revealing the chamber beyond.  The faint glow '
+                                   'emanates from within, beckoning you WEST.'},
             'bricks':
                 "The bricks lining the passage are cold and damp, etched with strange symbols and markings.  Some are "
                 "loose, and you can hear the scuttling of rats behind them.",
@@ -554,10 +650,12 @@ rooms = {
             "walls are adorned with intricate RUNES that pulse with power.",
         'object': {
             'around': {
-                'before_take_amulet': "The chamber is surprisingly spacious, with a high, vaulted ceiling.  An eerie "
-                                      "silence hangs in the air, broken only by the soft hum of magical energy.",
-                'after_take_amulet': "The chamber feels strangely empty now, the silence even more profound with the "
-                                     "amulet gone."
+                'amulet_not_taken':
+                    "The chamber is surprisingly spacious, with a high, vaulted ceiling.  An eerie "
+                    "silence hangs in the air, broken only by the soft hum of magical energy.",
+                'amulet_taken':
+                    "The chamber feels strangely empty now, the silence even more profound with the "
+                    "amulet gone."
             },
             'amulet':
                 "The amulet rests atop the pedestal, its surface etched with intricate symbols that seem to shift and "
@@ -660,7 +758,7 @@ while game_running:
         verb = words[0]
         noun = ''
 
-    if verb == 'enter' and game_state['current_room'] == 'Mort\'ton':
+    if verb == 'enter' and game_state['current_room'] == "Mort'ton":
         game_state['current_room'] = 'Crypt of the Fallen'
         print_directions()
     # This if block will be replaced with a "handle_go" function in the full game, but it checks
