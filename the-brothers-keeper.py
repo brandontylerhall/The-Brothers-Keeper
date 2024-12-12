@@ -3,9 +3,7 @@ import os
 from rooms import rooms
 
 game_state = {
-    'has_pickaxe': False,
     'destroyed_wall': False,
-    'has_amulet': False,
     'inventory': [],
     'current_room': "Mort'ton",
 }
