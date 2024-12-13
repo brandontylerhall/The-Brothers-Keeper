@@ -4,6 +4,5 @@ settings.py
 *.pot
 *.pyc
 .idea/
-map.png
 INSTRUCTIONS.MD
 test.py
