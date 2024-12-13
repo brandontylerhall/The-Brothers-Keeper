@@ -20,16 +20,20 @@ def print_directions(directions, game_state, rooms):
     print('Your available directions are: {}'.format(', '.join(available_directions)))
 
 
-def handle_help():
-    print('Commands:\n'
-          'CLEAR -- Clears the screen\n'
-          'GO (DIRECTION/ROOM NAME) -- Go a direction (some rooms have single word movement commands)\n'
-          'INVENTORY -- Shows what you\'re carrying\n'
-          'LOOK (OBJECT/DIRECTION) -- Look around, look at an object, etc\n'
-          # TODO: Maybe update to only show this if they're holding the map
-          'MAP -- Shows the map\n'
-          'TAKE (ITEM) -- Take an item\n'
-          'USE (OBJECT) -- Use an object')
+def handle_help(inventory):
+    commands = [
+        'CLEAR -- Clears the screen.',
+        'GO (DIRECTION/ROOM NAME) -- Go a direction.',
+        "INVENTORY -- Shows what you're carrying.",
+        'LOOK (OBJECT/DIRECTION) -- Look around, look at an object, etc.',
+        'TAKE (ITEM) -- Take an item.',
+        'USE (OBJECT) -- Use an object.'
+    ]
+
+    if 'map' in inventory:
+        commands.insert(3, 'MAP -- Shows the map')
+
+    print('\n'.join(commands))
 
 
 def handle_inventory(game_state):
