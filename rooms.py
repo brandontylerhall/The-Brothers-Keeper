@@ -596,9 +596,10 @@ rooms = {
         'west': 'Hidden Chamber',
         # Lore
         'description':
-            "You find yourself in a damp and narrow passage. The air is thick with the smell of mildew and \n"
-            "decay, and the silence is broken only by the echo of your own heartbeat. A crumbling STONE \n"
-            "WALL blocks the path to the NORTH.",
+            "You find yourself in a damp and narrow passage. The air is thick with the smell of mildew and decay, "
+            "and the silence is broken only by the echo of your own heartbeat.  A crumbling STONE WALL blocks the "
+            "path to the WEST. To the NORTH, a path leads deeper into the darkness, but an oppressive aura hangs over "
+            "it, promising danger.",
         'object': {
             'around': {
                 'before_break_wall':
