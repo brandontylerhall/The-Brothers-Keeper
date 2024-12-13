@@ -14,7 +14,7 @@ current_room = game_state['current_room']
 previous_room = current_room
 directions = ['north', 'south', 'east', 'west', 'enter', 'down']
 
-utility.start_credits()
+# utility.start_credits()
 print(rooms[current_room]['description'])
 
 while game_running:
@@ -54,6 +54,10 @@ while game_running:
     elif verb.lower() == 'help':
         utility.handle_help(game_state['inventory'])
     elif verb.lower() == 'map':
-        print('handle_map')
+        if 'map' in game_state['inventory']:
+            user_action.handle_map(current_room)
+        else:
+            print('You\'re not carrying a map.')
+
     else:
         print("I don't understand what you want me to do.")
