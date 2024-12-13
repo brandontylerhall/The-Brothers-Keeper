@@ -4,12 +4,12 @@ import user_action
 from rooms import rooms
 
 game_state = {
+    'game_running': True,
     'destroyed_wall': False,
     'inventory': [],
-    'current_room': "The Blighted Sepulcher",
+    'current_room': "Mort'ton",
 }
 
-game_running = True
 current_room = game_state['current_room']
 previous_room = current_room
 directions = ['north', 'south', 'east', 'west', 'inside', 'down']
@@ -17,7 +17,7 @@ directions = ['north', 'south', 'east', 'west', 'inside', 'down']
 # utility.start_credits()
 print(rooms[current_room]['description'])
 
-while game_running:
+while game_state['game_running']:
     user_in = input('> ')
     # splits input on the first whitespace to separate
     # the verb and the remaining input
@@ -48,7 +48,7 @@ while game_running:
         if noun == '' or noun == 'around':
             user_action.handle_look_around(game_state['current_room'], rooms)
         else:
-            print('handle_look_obj')
+            user_action.handle_look_obj(noun, game_state['current_room'], rooms)
     elif verb.lower() == 'use':
         user_action.handle_use(noun, game_state['current_room'], game_state)
     elif verb.lower() == 'help':
@@ -58,7 +58,7 @@ while game_running:
             user_action.handle_map()
         else:
             print('You\'re not carrying a map.')
-    elif verb.lower() == 'room':
-        print(game_state['current_room'])
     else:
         print("I don't understand what you want me to do.")
+
+utility.outro()
