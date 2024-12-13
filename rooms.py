@@ -668,51 +668,49 @@ rooms = {
             "light, stands before you, a puppet of the ancient, malevolent forces that now control him. He raises \n"
             "his staff, and the shadows around him begin to writhe and take shape.",
         'object': {
-            'around': {
-                'no_helm':
-                    "AHRIM's gaze falls upon your unprotected head, and a sneer curls his lip. 'Foolish mortal,'\n"
-                    "he whispers, 'to face me without adequate protection.'  He raises his staff, and a bolt of \n"
-                    "dark energy strikes you down.",
-                'no_brassard':
-                    "AHRIM's eyes narrow as he notices your exposed arms. 'Such vulnerability...' he mutters, \n"
-                    "'an invitation to pain.'  He flicks his wrist, and shadowy tendrils wrap around your limbs, \n"
-                    "crushing them with unimaginable force.",
-                'no_ward':
-                    "AHRIM's staff glows with an eerie light as he senses your lack of magical defenses. 'Your spirit \n"
-                    "is weak,' he intones, 'a mere wisp in the face of my power.'  He unleashes a torrent of arcane \n"
-                    "energy, tearing your soul from your body.",
-                'no_gauntlets':
-                    "AHRIM's gaze falls upon your bare hands, and a cruel smile spreads across his face. 'Unarmed and \n"
-                    "unprepared,' he mocks, 'you are no match for me.'  He clenches his fist, and your weapons \n"
-                    "crumble into dust.",
-                'no_spear':
-                    "AHRIM's eyes gleam with amusement as he observes your lack of a proper weapon. 'A warrior \n"
-                    "without a spear?' he scoffs. 'You are but a child playing at war.'  He summons a whirlwind of \n"
-                    "shadows, tearing you apart limb from limb.",
-                'no_boots':
-                    "AHRIM's eyes flicker with disdain as he notices your exposed feet. 'So slow and clumsy,'\n"
-                    "he chides, 'you cannot hope to escape my wrath.'  He stamps his foot, and the ground beneath \n"
-                    "you erupts, swallowing you whole.",
-                'no_amulet':
-                    "AHRIM raises his staff, and the shadows surge towards you, their forms twisting into monstrous \n"
-                    "shapes with gaping maws and razor-sharp claws. You raise your weapons in a desperate attempt to \n"
-                    "defend yourself, but the shadows overwhelm you, tearing at your flesh and consuming your soul. \n"
-                    "Your vision fades to black as you hear Ahrim's chilling laughter echo through the chamber.",
-                'has_all':
-                    "AHRIM's eyes widen in surprise as he sees you approach, fully equipped and radiating an aura of \n"
-                    "power. He raises his staff, and the shadows around him begin to writhe and take shape, \n"
-                    "ready to defend his brothers' legacy. The battle begins!",
-                'battle':
-                    "The chamber erupts in a chaotic dance of light and shadow as you clash with AHRIM. His staff \n"
-                    "crackles with corrupted energy, unleashing devastating spells. But you stand your ground, \n"
-                    "your own weapons imbued with the power of the fallen brothers. The Amulet of the Damned pulses \n"
-                    "with a warm light, dispelling the shadows that attempt to ensnare you. The battle rages on, \n"
-                    "each strike bringing you closer to victory.",
-                'win':
-                    "With a final, desperate blow, you vanquish AHRIM. His form dissolves into wisps of dark energy, \n"
-                    "and the shadows dissipate, revealing the ancient stones of the sepulcher. You have overcome the \n"
-                    "Barrows' final guardian, claiming its treasures for your own."
-            }
-        },
-    }
+            'no_helm':
+                "AHRIM's gaze falls upon your unprotected head, and a sneer curls his lip. 'Foolish mortal,'\n"
+                "he whispers, 'to face me without adequate protection.'  He raises his staff, and a bolt of \n"
+                "dark energy strikes you down.",
+            'no_brassard':
+                "AHRIM's eyes narrow as he notices your exposed arms. 'Such vulnerability...' he mutters, \n"
+                "'an invitation to pain.'  He flicks his wrist, and shadowy tendrils wrap around your limbs, \n"
+                "crushing them with unimaginable force.",
+            'no_ward':
+                "AHRIM's staff glows with an eerie light as he senses your lack of magical defenses. 'Your spirit \n"
+                "is weak,' he intones, 'a mere wisp in the face of my power.'  He unleashes a torrent of arcane \n"
+                "energy, tearing your soul from your body.",
+            'no_gauntlets':
+                "AHRIM's gaze falls upon your bare hands, and a cruel smile spreads across his face. 'Unarmed and \n"
+                "unprepared,' he mocks, 'you are no match for me.'  He clenches his fist, and your weapons \n"
+                "crumble into dust.",
+            'no_spear':
+                "AHRIM's eyes gleam with amusement as he observes your lack of a proper weapon. 'A warrior \n"
+                "without a spear?' he scoffs. 'You are but a child playing at war.'  He summons a whirlwind of \n"
+                "shadows, tearing you apart limb from limb.",
+            'no_boots':
+                "AHRIM's eyes flicker with disdain as he notices your exposed feet. 'So slow and clumsy,'\n"
+                "he chides, 'you cannot hope to escape my wrath.'  He stamps his foot, and the ground beneath \n"
+                "you erupts, swallowing you whole.",
+            'no_amulet':
+                "AHRIM raises his staff, and the shadows surge towards you, their forms twisting into monstrous \n"
+                "shapes with gaping maws and razor-sharp claws. You raise your weapons in a desperate attempt to \n"
+                "defend yourself, but the shadows overwhelm you, tearing at your flesh and consuming your soul. \n"
+                "Your vision fades to black as you hear Ahrim's chilling laughter echo through the chamber.",
+            'has_all':
+                "AHRIM's eyes widen in surprise as he sees you approach, fully equipped and radiating an aura of \n"
+                "power. He raises his staff, and the shadows around him begin to writhe and take shape, \n"
+                "ready to defend his brothers' legacy. The battle begins!",
+            'battle':
+                "The chamber erupts in a chaotic dance of light and shadow as you clash with AHRIM. His staff \n"
+                "crackles with corrupted energy, unleashing devastating spells. But you stand your ground, \n"
+                "your own weapons imbued with the power of the fallen brothers. The Amulet of the Damned pulses \n"
+                "with a warm light, dispelling the shadows that attempt to ensnare you. The battle rages on, \n"
+                "each strike bringing you closer to victory.",
+            'win':
+                "With a final, desperate blow, you vanquish AHRIM. His form dissolves into wisps of dark energy, \n"
+                "and the shadows dissipate, revealing the ancient stones of the sepulcher. You have overcome the \n"
+                "Barrows' final guardian, claiming its treasures for your own."
+        }
+    },
 }
