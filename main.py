@@ -28,6 +28,24 @@ def print_directions():
     print('Your available directions are: {}'.format(', '.join(available_directions)))
 
 
+def handle_go(verb, noun, rooms, game_state, current_room):
+    # global current_room
+
+    if noun == '':
+        if verb == 'enter' and game_state['current_room'] == "Mort'ton":
+            game_state['current_room'] = 'Crypt of the Fallen'
+            print_directions()
+        else:
+            print("You need to be more specific.")
+    elif noun in rooms[current_room].keys():
+        current_room = rooms[current_room][noun]
+        game_state["current_room"] = current_room
+    else:
+        print('I can\'t go that way.')
+
+    # print_directions()
+
+
 print_directions()
 
 while game_running:
@@ -55,12 +73,14 @@ while game_running:
     if verb.lower() == 'exit':
         print("Exiting the game. Goodbye!")
         game_running = False
+    elif verb.lower() == 'enter':
+        handle_go('enter', '', rooms, game_state, current_room)
     elif verb.lower() == 'take':
         print('handle_take')
     elif verb.lower() == 'clear':
         utility.clear()
     elif verb.lower() == 'go':
-        print('handle_go')
+        handle_go(verb, noun, rooms, game_state, game_state['current_room'])
     elif verb.lower() == 'inventory':
         utility.handle_inventory(game_state)
     elif verb.lower() == 'look':
