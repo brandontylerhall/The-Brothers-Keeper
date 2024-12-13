@@ -1,4 +1,6 @@
 import random
+import time
+
 from PIL import Image
 
 
@@ -59,12 +61,19 @@ def handle_go(noun, rooms, game_state, current_room):
             if missing_items:
                 if len(missing_items) > 1:
                     missing_item = random.choice(missing_items)
-                    print(rooms[new_room]['object']['around'][f'no_{missing_item}'])
+                    print(rooms[new_room]['object'][f'no_{missing_item}'])
                 else:
                     missing_item = missing_items[0]
-                    print(rooms[new_room]['object']['around'][f'no_{missing_item}'])
-                print('oh dear youre dead')
+                    print(rooms[new_room]['object'][f'no_{missing_item}'])
                 return
+            else:
+                print(rooms[new_room]['object']['battle'])
+                print()
+                print(rooms[new_room]['object']['win'])
+                time.sleep(15)
+                game_state['game_running'] = False
+                return
+
 
         # Update current room in game_state
         game_state['current_room'] = new_room
