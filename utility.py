@@ -5,6 +5,20 @@ def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
 
 
+def print_directions(directions, game_state, rooms):
+    room = game_state['current_room']
+    room_directions = list(rooms.get(room).keys())
+    available_directions = []
+
+    print(f"You're currently in: {game_state['current_room']}")
+
+    for direction in directions:
+        if direction in room_directions:
+            available_directions.append(direction.capitalize())
+
+    print('Your available directions are: {}'.format(', '.join(available_directions)))
+
+
 def handle_help():
     print('Commands:\n'
           'CLEAR -- Clears the screen\n'
