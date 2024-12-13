@@ -596,9 +596,9 @@ rooms = {
         'west': 'Hidden Chamber',
         # Lore
         'description':
-            "You find yourself in a damp and narrow passage. The air is thick with the smell of mildew and decay, "
-            "and the silence is broken only by the echo of your own heartbeat.  A crumbling STONE WALL blocks the "
-            "path to the WEST. To the NORTH, a path leads deeper into the darkness, but an oppressive aura hangs over "
+            "You find yourself in a damp and narrow passage. The air is thick with the smell of mildew and decay, \n"
+            "and the silence is broken only by the echo of your own heartbeat.  A crumbling STONE WALL blocks the \n"
+            "path to the WEST. To the NORTH, a path leads deeper into the darkness, but an oppressive aura hangs over \n"
             "it, promising danger.",
         'object': {
             'around': {
@@ -670,8 +670,8 @@ rooms = {
         'object': {
             'around': {
                 'no_helm':
-                    "AHRIM's gaze falls upon your unprotected head, and a sneer curls his lip. 'Foolish mortal,\n"
-                    "' he whispers, 'to face me without adequate protection.'  He raises his staff, and a bolt of \n"
+                    "AHRIM's gaze falls upon your unprotected head, and a sneer curls his lip. 'Foolish mortal,'\n"
+                    "he whispers, 'to face me without adequate protection.'  He raises his staff, and a bolt of \n"
                     "dark energy strikes you down.",
                 'no_brassard':
                     "AHRIM's eyes narrow as he notices your exposed arms. 'Such vulnerability...' he mutters, \n"
@@ -690,8 +690,8 @@ rooms = {
                     "without a spear?' he scoffs. 'You are but a child playing at war.'  He summons a whirlwind of \n"
                     "shadows, tearing you apart limb from limb.",
                 'no_boots':
-                    "AHRIM's eyes flicker with disdain as he notices your exposed feet. 'So slow and clumsy,\n"
-                    "' he chides, 'you cannot hope to escape my wrath.'  He stamps his foot, and the ground beneath \n"
+                    "AHRIM's eyes flicker with disdain as he notices your exposed feet. 'So slow and clumsy,'\n"
+                    "he chides, 'you cannot hope to escape my wrath.'  He stamps his foot, and the ground beneath \n"
                     "you erupts, swallowing you whole.",
                 'no_amulet':
                     "AHRIM raises his staff, and the shadows surge towards you, their forms twisting into monstrous \n"
