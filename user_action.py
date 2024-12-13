@@ -1,3 +1,8 @@
+from PIL import Image
+
+import os
+
+
 def handle_take(noun, current_room, rooms, game_state):
     inventory = game_state["inventory"]
 
@@ -52,13 +57,9 @@ def handle_look_obj(noun, current_room, rooms, game_state):
         print(f"I don't see a {noun} to look at.")
 
 
-def handle_go(verb, noun, rooms, game_state, current_room):
+def handle_go(noun, rooms, game_state, current_room):
     if noun == '':
-        if verb == 'enter' and game_state['current_room'] == "Mort'ton":
-            game_state['current_room'] = 'Crypt of the Fallen'
-            print(rooms[game_state['current_room']]['description'])
-        else:
-            print("You need to be more specific.")
+        print("You need to be more specific.")
     elif noun in rooms[current_room].keys():
         game_state['current_room'] = rooms[current_room][noun]
         print(rooms[game_state['current_room']]['description'])
