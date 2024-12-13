@@ -1,4 +1,5 @@
 import os
+import time
 
 
 def clear():
@@ -39,3 +40,23 @@ def handle_inventory(game_state):
         print('You aren\'t carrying anything.')
     else:
         print(f'Inventory: {", ".join(inventory)}')
+
+
+def start_credits():
+    print("-------------------- Welcome to The Brother's Keeper \U0001F642 Nice to have you --------------------\n\n"
+          "Pay attention to the words in all CAPS.\n\n"
+          "If you end up getting stuck, you can type 'help' to learn various "
+          "commands that may be useful.\n\n"
+          "Have fun and good luck!\n\n"
+          "----------------------------------------------------------------------------------------------")
+    time.sleep(5)
+    clear()
+    print("In the ancient land of Morytania, whispers of a hidden treasure have lured adventurers for centuries. \n"
+          "Legend speaks of the Barrows Brothers, six powerful warriors laid to rest in a labyrinthine tomb, \n"
+          "their spirits guarding a wealth of powerful artifacts. An old man, his eyes filled with a knowing glint, \n"
+          "points you towards the eerie marshes of Mort'ton. 'Seek the Barrows,' he rasps, 'if you dare. But beware, \n"
+          "the brothers' spirits are restless, and their treasures are not easily earned.' Driven by the promise of \n"
+          "riches and glory, you venture to the swamps of Morytania, your heart pounding with anticipation and \n"
+          "trepidation...\n")
+    os.system("pause")
+    clear()
