@@ -1,14 +1,14 @@
 rooms = {
     "Mort'ton": {
         # Direction(s)
-        'enter': 'Crypt of the Fallen',
+        'inside': 'Crypt of the Fallen',
         # Lore
         'description':
             'You stand at your CAMP, a modest setup of a TENT and a FIREPIT, nestled just beyond the eerie marshes \n'
             'that border the Barrows. The air hangs heavy with mist, carrying the faint stench of decay from the \n'
             'crypts ahead. Your supplies are sparse, having been nearly exhausted after your long journey from \n'
             'Lumbridge. A foreboding hill looms in the distance, its entrance marked by ancient stones and an \n'
-            'unsettling stillness. The only way forward is to ENTER the barrows.',
+            'unsettling stillness. The only way forward is to go INSIDE the barrows.',
         'object': {
             'around':
                 'Your CAMP feels hastily put together, as if you intended to rest here only briefly. The FIREPIT has \n'
