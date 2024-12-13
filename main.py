@@ -36,14 +36,12 @@ while game_running:
     if verb.lower() == 'exit':
         print("Exiting the game. Goodbye!")
         game_running = False
-    elif verb.lower() == 'enter':
-        user_action.handle_go('enter', '', rooms, game_state, game_state['current_room'])
     elif verb.lower() == 'take':
         print('handle_take')
     elif verb.lower() == 'clear':
         utility.clear()
     elif verb.lower() == 'go':
-        user_action.handle_go(verb, noun, rooms, game_state, game_state['current_room'])
+        user_action.handle_go(noun, rooms, game_state, game_state['current_room'])
     elif verb.lower() == 'inventory':
         utility.handle_inventory(game_state)
     elif verb.lower() == 'look':
@@ -54,7 +52,7 @@ while game_running:
     elif verb.lower() == 'use':
         user_action.handle_use(noun, game_state['current_room'], game_state)
     elif verb.lower() == 'help':
-        utility.handle_help()
+        utility.handle_help(game_state['inventory'])
     elif verb.lower() == 'map':
         print('handle_map')
     else:
