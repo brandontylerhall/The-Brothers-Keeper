@@ -1,7 +1,5 @@
 from PIL import Image
 
-import os
-
 
 def handle_take(noun, current_room, rooms, game_state):
     inventory = game_state["inventory"]
@@ -67,18 +65,6 @@ def handle_go(noun, rooms, game_state, current_room):
         print('I can\'t go that way.')
 
 
-def handle_map(current_room):
-    # Get the current directory
-    current_directory = os.path.dirname(os.path.abspath(__file__))
-
-    # Construct the path to the map_files directory
-    map_files_directory = os.path.join(current_directory, 'map_files')
-
-    # Construct the path to the image file
-    image_path = os.path.join(map_files_directory, f'{current_room}.png')
-
-    try:
-        Image.open(image_path).show()
-        print('Pulling out the map.')
-    except FileNotFoundError:
-        print(f"Map image for {current_room} not found.")
+def handle_map():
+    Image.open('map.png').show()
+    print('Pulling out the map.')
