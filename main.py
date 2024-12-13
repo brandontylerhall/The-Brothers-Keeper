@@ -6,13 +6,13 @@ from rooms import rooms
 game_state = {
     'destroyed_wall': False,
     'inventory': [],
-    'current_room': "Mort'ton",
+    'current_room': "The Blighted Sepulcher",
 }
 
 game_running = True
 current_room = game_state['current_room']
 previous_room = current_room
-directions = ['north', 'south', 'east', 'west', 'enter', 'down']
+directions = ['north', 'south', 'east', 'west', 'inside', 'down']
 
 # utility.start_credits()
 print(rooms[current_room]['description'])
@@ -37,7 +37,7 @@ while game_running:
         print("Exiting the game. Goodbye!")
         game_running = False
     elif verb.lower() == 'take':
-        print('handle_take')
+        user_action.handle_take(noun, game_state['current_room'], rooms, game_state)
     elif verb.lower() == 'clear':
         utility.clear()
     elif verb.lower() == 'go':
@@ -55,9 +55,10 @@ while game_running:
         utility.handle_help(game_state['inventory'])
     elif verb.lower() == 'map':
         if 'map' in game_state['inventory']:
-            user_action.handle_map(current_room)
+            user_action.handle_map()
         else:
             print('You\'re not carrying a map.')
-
+    elif verb.lower() == 'room':
+        print(game_state['current_room'])
     else:
         print("I don't understand what you want me to do.")
