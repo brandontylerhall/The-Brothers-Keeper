@@ -64,3 +64,11 @@ def start_credits():
           "trepidation...\n")
     os.system("pause")
     clear()
+
+
+def outro():
+    print("\nYou emerge from the Barrows, exhausted but triumphant, the weight of the brothers' treasures heavy in your \n"
+        "pack. You find the old man waiting for you, a knowing smile on his face. 'I see you were successful,'\n"
+        "he says, his voice raspy but warm.  'May the artifacts serve you well.' You nod in gratitude, the perils \n"
+        "of the Barrows fading into memory as you anticipate the adventures to come.")
+    time.sleep(10)
